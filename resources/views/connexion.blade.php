@@ -2,27 +2,32 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 	<title>NAQD</title>
 </head>
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-	<p>Mounir is a good person</p>
+	<div class="row">
+		<form class="col s6 offset-s6">
+			<h1>CONNEXION</h1><hr>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="email" type="email" name="email" class="validate">
+					<label for="email">Adresse électronique</label>
+				</div>
+			</div>
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b1a1c5f49b9e140d902e3e4c6ea13960f296645f
-		<p>Mounir nta gros pd ya zah</p>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="password" type="password" name="password" class="validate">
+					<label for="password">Mot de passe</label>
+				</div>
+			</div>
+		</form>
+	</div>
 
-		<h1>Mounir pourquoi es tu si beau ?</h1>
-=======
-		<p></p>
->>>>>>> 84773b1ac0e748960d4159f30763b385b2bd6648
-<<<<<<< HEAD
->>>>>>> b1a1c5f49b9e140d902e3e4c6ea13960f296645f
-=======
->>>>>>> b1a1c5f49b9e140d902e3e4c6ea13960f296645f
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 </html>
