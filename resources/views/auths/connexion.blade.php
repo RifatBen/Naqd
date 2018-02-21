@@ -1,17 +1,13 @@
 @extends('layouts.master')
 @section('content')
 
-<div class="back-top-container">
-	<h3>NAQD</h3>
-</div>
-
 <div class="row">
 	<div class="col s6 offset-s3">
 		<div class="card formulaire-card">
-			<div class="card-content white-text center-align">
+			<div class="card-content center-align">
 
 				<span class="card-title" style="font-size: 45px;">Connexion</span>
-				<br><hr style="border: 1px white solid;"><br>
+				<br><hr><br>
 
 				<form>
 					<div class="row">
@@ -25,6 +21,12 @@
 						<div class="input-field col s8 offset-s2">
 							<input id="mot_de_passe" type="password" name="mot_de_passe" class="validate">
 							<label for="mot_de_passe" class="active">Mot de passe</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s8 offset-s2">
+							<button class="btn waves-effect waves-light" type="submit" name="valide">Valider</button>
 						</div>
 					</div>
 				</form>
