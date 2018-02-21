@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('connexion');
-});
+
+Route::get('/connexion', 'SessionsController@index');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
