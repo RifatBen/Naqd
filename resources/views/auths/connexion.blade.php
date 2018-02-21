@@ -2,13 +2,21 @@
 
 @section('content')
 
+
 <div class="col s6 offset-s3">
 		<h3 class="center-align">Connexion</h3>
-</div>		
+
+
+
+</div>	
+
+
 	<div class="row">
 		<div class="col s6 offset-s3">	
-				<form action="">
+				<form action="/connexion" method="POST">
 				
+					{{ csrf_field() }}
+
 					<div class="input-field">
 
 						<input type="email" name="email" id="email" class="input-field"> <label for="email" class="active">Email </label>
@@ -18,7 +26,7 @@
 
 					<div class="input-field">
 
-						<input type="password" name="password" id="password" value="mounir pd"> <label for="password" class="active">Password</label>
+						<input type="password" name="password" id="password"> <label for="password" class="active">Password</label>
 					
 					</div>
 
@@ -32,6 +40,12 @@
 
 				</form>
 
+				
+@include('layouts.errors')	
+
 		</div>
 	</div>
+
+
+
 @endsection

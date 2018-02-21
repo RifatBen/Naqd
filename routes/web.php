@@ -12,7 +12,19 @@
 */
 
 
-Route::get('/connexion', 'SessionsController@index');
+
+Route::get('/', function(){
+	return view('home');
+});
+
+
+Route::get('/connexion', 'SessionsController@create');
+Route::post('/connexion' , 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
+
+Route::get('/inscription', 'RegistrationsController@create');
+Route::post('/inscription', 'RegistrationsController@store');
 
 
 Route::get('/home', 'HomeController@index')->name('home');

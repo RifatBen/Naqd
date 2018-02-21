@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class SessionsController extends Controller
 {
+
+
+    public function __construct(){
+        $this->middleware('guest')->except(['destroy']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,7 @@ class SessionsController extends Controller
      */
     public function index()
     {
-        return view('auths.connexion');
+        
     }
 
     /**
@@ -23,7 +29,7 @@ class SessionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('auths.connexion');
     }
 
     /**
@@ -34,41 +40,11 @@ class SessionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+      
+        if(!auth()->attempt(request(['email', 'password'])))
+            return back()->withErrors(['', 'Logins erronés']);;
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        return redirect('/');
     }
 
     /**
@@ -77,8 +53,10 @@ class SessionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+       auth()->logout();
+
+       return redirect('/');
     }
 }
