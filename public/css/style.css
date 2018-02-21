@@ -1,22 +1,19 @@
 body {
-	background-color: #D5D5D5;
-}
-
-.back-top-container {
-	position: fixed;
-	width: 100%;
-	top: 0px;
-	height: 200px;
-
-	background-color: #6D7993;
-	color: #D5D5D5;
-
-	padding: 20px 0 0 45px;
+	background-color: #F4F4F4;
 }
 
 .formulaire-card {
-	margin-top: 100px;
+	margin-top: 75px;
 	padding: 35px 0 0 0;
-
-	background-color: #9685;
 }
+
+	.input-field label {
+		color: #000;
+	}
+	.input-field input[type=text]:focus + label {
+		color: #000;
+	}
+	.input-field input[type=text]:focus {
+		border-bottom: 1px solid #000;
+		box-shadow: 0 1px 0 0 #000;
+	}
