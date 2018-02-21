@@ -19,4 +19,10 @@ class ConnexionController extends Controller {
 		}*/
 		return redirect('/accueil');
 	}
+
+	public function destroy() {
+		auth()->logout();
+		return redirect('/');
+	}
 }
+
