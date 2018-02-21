@@ -1,16 +1,7 @@
-
-	
-	@if($errors->any())	
-
-
-	<div class="card-panel red lighten-2">
-
+@if($errors->any())
+<div class="row red darken-1 white-text">
 	@foreach($errors->all() as $error)
-			
-			{{$error}}
-
+		{{$error}}
 	@endforeach
-
-
-	</div>
-	@endif
+</div>
+@endif

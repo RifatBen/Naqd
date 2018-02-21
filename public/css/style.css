@@ -1,0 +1,22 @@
+body {
+	background-color: #D5D5D5;
+}
+
+.back-top-container {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	height: 200px;
+
+	background-color: #6D7993;
+	color: #D5D5D5;
+
+	padding: 20px 0 0 45px;
+}
+
+.formulaire-card {
+	margin-top: 100px;
+	padding: 35px 0 0 0;
+
+	background-color: #9685;
+}

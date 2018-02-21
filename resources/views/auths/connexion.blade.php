@@ -1,51 +1,37 @@
 @extends('layouts.master')
-
 @section('content')
 
+<div class="back-top-container">
+	<h3>NAQD</h3>
+</div>
 
-<div class="col s6 offset-s3">
-		<h3 class="center-align">Connexion</h3>
+<div class="row">
+	<div class="col s6 offset-s3">
+		<div class="card formulaire-card">
+			<div class="card-content white-text center-align">
 
+				<span class="card-title" style="font-size: 45px;">Connexion</span>
+				<br><hr style="border: 1px white solid;"><br>
 
-
-</div>	
-
-
-	<div class="row">
-		<div class="col s6 offset-s3">	
-				<form action="/connexion" method="POST">
-				
-					{{ csrf_field() }}
-
-					<div class="input-field">
-
-						<input type="email" name="email" id="email" class="input-field"> <label for="email" class="active">Email </label>
-
+				<form>
+					<div class="row">
+						<div class="input-field col s8 offset-s2">
+							<input id="email" type="email" name="email" class="validate">
+							<label for="email" class="active">Adresse électronique</label>
+						</div>
 					</div>
 
-
-					<div class="input-field">
-
-						<input type="password" name="password" id="password"> <label for="password" class="active">Password</label>
-					
+					<div class="row">
+						<div class="input-field col s8 offset-s2">
+							<input id="mot_de_passe" type="password" name="mot_de_passe" class="validate">
+							<label for="mot_de_passe" class="active">Mot de passe</label>
+						</div>
 					</div>
-
-
-					<div class="input-field">
-
-						<button class="btn waves-effect waves-light">Valider</button>
-
-					</div>	
-
-
 				</form>
 
-				
-@include('layouts.errors')	
-
+			</div>
 		</div>
 	</div>
-
-
+</div>
 
 @endsection
