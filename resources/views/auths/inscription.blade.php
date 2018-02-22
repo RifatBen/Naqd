@@ -45,11 +45,11 @@
 					<div class="row">
 						<div class="input-field col s10 offset-s1">
 							<select name="genre">
-								<option value="" disabled selected></option>
+								
 								<option value="Homme">Homme</option>
 								<option value="Femme">Femme</option>
 							</select>
-							<label>Genre</label>
+							<label for="genre">Genre</label>
 						</div>
 					</div>
 
