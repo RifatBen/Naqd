@@ -55,7 +55,7 @@
 
 					<div class="row">
 						<div class="input-field col s10 offset-s1">
-							<select name="pays"> 
+							<select name="pays "> 
 								<option value="Afghanistan">Afghanistan </option>
 								<option value="Afrique_Centrale">Afrique_Centrale </option>
 								<option value="Afrique_du_sud">Afrique_du_Sud </option> 
