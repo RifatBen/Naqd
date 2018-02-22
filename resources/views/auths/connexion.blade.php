@@ -9,7 +9,7 @@
 				<span class="card-title" style="font-size: 45px;">Connexion</span>
 				<br><hr><br>
 
-				<form>
+				<form method="post" action="/connexion">
 					<div class="row">
 						<div class="input-field col s8 offset-s2">
 							<input id="email" type="email" name="email" class="validate">
