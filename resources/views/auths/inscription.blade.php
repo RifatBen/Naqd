@@ -10,6 +10,9 @@
 				<br><hr><br>
 
 				<form method="post" action="/inscription">
+
+					{{ csrf_field() }}
+
 					<div class="row">
 						<div class="input-field col s5 offset-s1">
 							<input id="nom" type="text" name="nom" class="validate">

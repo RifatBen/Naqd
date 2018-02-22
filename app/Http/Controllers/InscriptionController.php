@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Request\InscriptionRequest;
+use App\Http\Requests\InscriptionRequest;
 
 class InscriptionController extends Controller {
 	public function __construct() {

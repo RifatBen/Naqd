@@ -32,7 +32,7 @@ class InscriptionRequest extends FormRequest
             'date' => 'required|max:255',
             'pays' => 'required|max:255',
             'niveau' => 'required|max:255',
-            'etab' => 'required|max:255'
+            'etablissement' => 'required|max:255'
         ];
     }
 
@@ -40,7 +40,7 @@ class InscriptionRequest extends FormRequest
     public function persist(){
 
             User::create(
-            $this->only(['nom' ,'prenom', 'email','mot_de_passe','genre' ,'date', 'pays','niveau' , 'etab'])
+            $this->only(['nom' ,'prenom', 'email','mot_de_passe','genre' ,'date', 'pays','niveau' , 'etablissement'])
         );
 
 
