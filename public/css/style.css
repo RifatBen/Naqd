@@ -2,18 +2,90 @@ body {
 	background-color: #F4F4F4;
 }
 
-.formulaire-card {
-	margin-top: 75px;
-	padding: 35px 0 0 0;
+.formulaire-fond {
+	background-color: #970747;
+	height: 150px;
+
+	padding: 20px 50px 50px 50px;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+.formulaire-fond-2 {
+	padding: 20px 20px 50px 50px;
+
+	position: fixed;
+	top: 150px;
+	right: 0;
+	left: 0;
+}
+.image-svg {
+	margin-left: 10px;
+	height: 25px;
 }
 
-	.input-field label {
-		color: #000;
-	}
-	.input-field input[type=text]:focus + label {
-		color: #000;
-	}
-	.input-field input[type=text]:focus {
-		border-bottom: 1px solid #000;
-		box-shadow: 0 1px 0 0 #000;
-	}
+form {
+	padding: 15px;
+}
+.card, .input-field {
+	width: 100%;
+}
+.card {
+	margin-top: 95px;
+}
+.card-accueil {
+	margin-top: 8px;
+}
+.nav-extended {
+	background-color: #970747;
+}
+
+.button-validation {
+	background-color: #283E56;
+}
+.button-validation:hover {
+	background-color: #1989AC;
+}
+
+.button-validation-contenu {
+	background-color: #283E56;
+	width: 90%;
+	font-size: 12px;
+	padding: 0px;
+}
+.button-validation-contenu:hover {
+	background-color: #1989AC;
+}
+
+.contenu-menu-vertical {
+    width: 100%;
+    height: 100%;
+    background-color: #B02060;
+}
+.contenu-menu-vertical a {
+    color: white;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+.contenu-menu-vertical a:hover {
+    background-color: #ccc;
+}
+
+.titre-menu-vertical {
+	text-align: center;
+	color: black;
+	background-color: #970747;
+	color: white;
+	margin: 0;
+	margin-bottom: 15px;
+	padding: 20px 0px;
+}
+
+.card-panel {
+	margin: 10px 0;
+	padding: 0 20px;
+	font-size: 12px;
+}

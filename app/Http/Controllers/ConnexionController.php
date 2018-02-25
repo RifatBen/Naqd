@@ -13,16 +13,21 @@ class ConnexionController extends Controller {
 		return view('auths.connexion');
 	}
 
+
+
 	public function store(Request $request) {
-		/*if(!auth()->attempt(request['email', 'password'])) {
+		
+		if(!auth()->attempt(request(['email', 'password']))) {
 			return back()->withErrors(['', 'Erreur de connexion']);
-		}*/
-		return redirect('/accueil');
+		}
+		return redirect('/');
 	}
+
+
 
 	public function destroy() {
 		auth()->logout();
-		return redirect('/');
+		return redirect()->home();
 	}
 }
 

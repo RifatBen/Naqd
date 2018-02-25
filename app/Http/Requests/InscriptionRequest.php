@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\User;
 
 class InscriptionRequest extends FormRequest
 {
@@ -27,10 +28,10 @@ class InscriptionRequest extends FormRequest
            'nom' => 'required|max:255',
             'prenom' => 'required|max:255',
             'email' => 'required|max:255|email',
-            'mot_de_passe' => 'required|min:8|max:32|confirmed',
+            'password' => 'required|min:8|max:32|confirmed',
             'genre' => 'required|max:255',
-            'date' => 'required|max:255',
-            'pays' => 'required|max:255',
+            'naissance' => 'required|date',
+            'pays' => 'required',
             'niveau' => 'required|max:255',
             'etablissement' => 'required|max:255'
         ];
@@ -38,11 +39,20 @@ class InscriptionRequest extends FormRequest
 
 
     public function persist(){
+        
+            User::create([
 
-            User::create(
-            $this->only(['nom' ,'prenom', 'email','mot_de_passe','genre' ,'date', 'pays','niveau' , 'etablissement'])
-        );
-
-
+            'nom' => $this->get('nom'),
+            'prenom' => $this->get('prenom'),
+            'email' => $this->get('email'),
+            'password' => bcrypt($this->get('password')),
+            'genre' => $this->get('genre'),
+            'date_naissance' => $this->get('naissance'),
+            'pays' => $this->get('pays'),
+            'niveau' => $this->get('niveau'),
+            'etablissement' => $this->get('etablissement')
+        ]
+                
+            );
     }
 }

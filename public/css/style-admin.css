@@ -1,0 +1,10 @@
+body {
+	background-color: lightgray;
+}
+
+.button-validation {
+	background-color: #283E56;
+}
+.button-validation:hover {
+	background-color: #1989AC;
+}

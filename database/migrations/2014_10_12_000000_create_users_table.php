@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration {
 			$table->string('nom');
 			$table->string('prenom');
 			$table->string('email')->unique();
-			$table->string('mot_de_passe');
+			$table->string('password');
 			$table->date('date_naissance');
 			$table->string('genre');
 			$table->string('pays');
