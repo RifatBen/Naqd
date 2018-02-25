@@ -53,42 +53,23 @@
 			</div>
 
 			<div class="col m9">
+
+
+				@foreach($articles as $article)
+
 				<div class="row">
 					<div class="col s12 m6">
 						<div class="card card-accueil">
 							<div class="card-content">
-								<span class="card-title"><a href="#">Article 1</a></span><hr>
-								<p>Morbi nec magna vitae est mattis fermentum. Nam eu quam mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque aliquet vitae sapien non sagittis. Nulla sagittis mollis leo, sed pharetra tellus. Nulla accumsan lorem ut justo tincidunt, id molestie neque fringilla. Nullam tempor quis neque sit amet tincidunt. Phasellus venenatis mauris sed nibh ultricies mattis. Mauris gravida urna eget sagittis tincidunt. Phasellus imperdiet aliquet neque, a malesuada sapien pretium in. Ut nec pulvinar massa, a consequat enim. Donec vulputate metus leo, quis auctor felis iaculis in. Maecenas porttitor erat tortor, ac maximus mi euismod quis. Nulla mattis ex imperdiet lorem lobortis consequat.</p>
+								<span class="card-title"><a href="#">{{ $article->titre }}</a></span><hr>
+								<p>{{ }}</p>
 							</div>
 						</div>
 					</div>
+	
+				@endforeach
 
-					<div class="col s12 m6">
-						<div class="card card-accueil">
-							<div class="card-content">
-								<span class="card-title"><a href="#">Article 2</a></span><hr>
-								<p>Morbi nec magna vitae est mattis fermentum. Nam eu quam mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque aliquet vitae sapien non sagittis. Nulla sagittis mollis leo, sed pharetra tellus. Nulla accumsan lorem ut justo tincidunt, id molestie neque fringilla. Nullam tempor quis neque sit amet tincidunt. Phasellus venenatis mauris sed nibh ultricies mattis. Mauris gravida urna eget sagittis tincidunt. Phasellus imperdiet aliquet neque, a malesuada sapien pretium in. Ut nec pulvinar massa, a consequat enim. Donec vulputate metus leo, quis auctor felis iaculis in. Maecenas porttitor erat tortor, ac maximus mi euismod quis. Nulla mattis ex imperdiet lorem lobortis consequat.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col s12 m6">
-						<div class="card card-accueil">
-							<div class="card-content">
-								<span class="card-title"><a href="#">Article 3</a></span><hr>
-								<p>Morbi nec magna vitae est mattis fermentum. Nam eu quam mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque aliquet vitae sapien non sagittis. Nulla sagittis mollis leo, sed pharetra tellus. Nulla accumsan lorem ut justo tincidunt, id molestie neque fringilla. Nullam tempor quis neque sit amet tincidunt. Phasellus venenatis mauris sed nibh ultricies mattis. Mauris gravida urna eget sagittis tincidunt. Phasellus imperdiet aliquet neque, a malesuada sapien pretium in. Ut nec pulvinar massa, a consequat enim. Donec vulputate metus leo, quis auctor felis iaculis in. Maecenas porttitor erat tortor, ac maximus mi euismod quis. Nulla mattis ex imperdiet lorem lobortis consequat.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col s12 m6">
-						<div class="card card-accueil">
-							<div class="card-content">
-								<span class="card-title"><a href="#">Article 4</a></span><hr>
-								<p>Morbi nec magna vitae est mattis fermentum. Nam eu quam mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque aliquet vitae sapien non sagittis. Nulla sagittis mollis leo, sed pharetra tellus. Nulla accumsan lorem ut justo tincidunt, id molestie neque fringilla. Nullam tempor quis neque sit amet tincidunt. Phasellus venenatis mauris sed nibh ultricies mattis. Mauris gravida urna eget sagittis tincidunt. Phasellus imperdiet aliquet neque, a malesuada sapien pretium in. Ut nec pulvinar massa, a consequat enim. Donec vulputate metus leo, quis auctor felis iaculis in. Maecenas porttitor erat tortor, ac maximus mi euismod quis. Nulla mattis ex imperdiet lorem lobortis consequat.</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

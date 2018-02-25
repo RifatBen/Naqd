@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration {
 			$table->string('pays');
 			$table->string('niveau');
 			$table->string('etablissement');
+			$table->integer('admin')->default(0);
 			$table->rememberToken();
 			$table->timestamps();
 		});

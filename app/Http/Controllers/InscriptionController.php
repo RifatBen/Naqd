@@ -17,6 +17,6 @@ class InscriptionController extends Controller {
 	public function store(InscriptionRequest $request) {
 		$request->persist();
 
-		return redirect('/');
+		return redirect()->home();
 	}
 }

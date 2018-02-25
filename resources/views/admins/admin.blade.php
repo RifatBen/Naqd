@@ -57,7 +57,7 @@
 				<div class="card">
 					<div class="card-content">
 						<span class="card-title">Ajouter un article</span>
-						<form> <!-- formulaire -->
+						<form form="post" action="/article"> <!-- formulaire -->
 
 							{{csrf_field()}}
 							<div class="input-field">

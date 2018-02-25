@@ -17,6 +17,18 @@ class UsersController extends Controller
 	}
 
 	public function update(Request $request, User $user){
+		$user->update([
+			 'nom' => request('nom'),
+            'prenom' => request('prenom'),
+            'email' => request('email'),
+            'genre' => request('genre'),
+            'date_naissance' => request('naissance'),
+            'pays' => request('pays'),
+            'niveau' => request('niveau'),
+            'etablissement' => request('etablissement')
+		]);	
+
+		return back();
 		
 	}
 

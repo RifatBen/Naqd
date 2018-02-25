@@ -12,20 +12,20 @@
 		<div class="row">
 			<div class="card center-align col m6 offset-m3">
 
-				<form method="post">
+				<form method="post" action="/profil">
 
 					{{ csrf_field() }}
-
+					
 					<h4>Profil Personnel</h4><hr><br>
 
 					<div class="row">
 						<div class="input-field col m5 offset-m1">
-							<input id="nom" type="text" name="nom" class="validate" required minlength="3" maxlength="255" autocomplete="off">
+							<input id="nom" type="text" name="nom" class="validate" required minlength="3" maxlength="255" autocomplete="off" value="{{auth()->user()->nom}}">
 							<label for="nom">Nom</label>
 						</div>
 
 						<div class="input-field col m5">
-							<input id="prenom" type="text" name="prenom" class="validate" required minlength="3" maxlength="255" autocomplete="off">
+							<input id="prenom" type="text" name="prenom" class="validate" required minlength="3" maxlength="255" autocomplete="off" value="{{auth()->user()->prenom}}">
 							<label for="prenom">Prénom</label>
 						</div>
 					</div>
@@ -33,9 +33,8 @@
 					<div class="row">
 						<div class="input-field col m10 offset-m1">
 							<select name="genre" required>
-								<option value="" disabled selected>Sélectionnez votre genre</option>
-								<option value="Homme">Homme</option>
-								<option value="Femme">Femme</option>
+								<option value="Homme" {{ auth()->user()->genre === 'Homme' ? "selected" : ""}}>Homme</option>
+								<option value="Femme" {{ auth()->user()->genre === 'Femme' ? "selected" : ""}}>Femme</option>
 							</select>
 							<label>Genre</label>
 						</div>
@@ -43,7 +42,7 @@
 
 					<div class="row">
 						<div class="input-field col m10 offset-m1">
-							<input id="naissance" type="date" name="naissance" class="validate" required>
+							<input id="naissance" type="date" name="naissance" class="validate" required value="{{auth()->user()->date_naissance}}">
 							<label for="naissance" class="active">Date de naissance</label>
 						</div>
 					</div>
@@ -54,14 +53,14 @@
 
 					<div class="row">
 						<div class="input-field col m10 offset-m1">
-							<input id="niveau" type="text" name="niveau" class="validate" required maxlength="255" autocomplete="off">
+							<input id="niveau" type="text" name="niveau" class="validate" required maxlength="255" autocomplete="off" value="{{auth()->user()->niveau}}">
 							<label for="niveau">Niveau d'instruction</label>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="input-field col m10 offset-m1">
-							<input id="etablissement" type="text" name="etablissement" class="validate" required maxlength="255" autocomplete="off">
+							<input id="etablissement" type="text" name="etablissement" class="validate" required maxlength="255" autocomplete="off" value="{{auth()->user()->etablissement}}">
 							<label for="etablissement">Etablissement actuel</label>
 						</div>
 					</div>
@@ -79,7 +78,7 @@
 		<div class="row">
 			<div class="card white center-align col m6 offset-m3">
 
-				<form method="post">
+				<form method="post" >
 
 					{{ csrf_field() }}
 
