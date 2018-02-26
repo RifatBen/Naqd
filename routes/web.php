@@ -8,6 +8,13 @@ Route::get('/connexion', 'ConnexionController@create')->name('login');
 Route::post('/connexion', 'ConnexionController@store');
 Route::get('/logout', 'ConnexionController@destroy');
 
+Route::get('/inscription', 'InscriptionController@create');
+Route::post('/inscription', 'InscriptionController@store');
+
+
+
+
+
 Route::get('/',
 	[
 		'middleware' => 'auth', 
@@ -26,12 +33,12 @@ Route::post('/article',['middleware'=>'admin', 'ArticlesController@store']);
 
 Route::get('/profil', 'UsersController@edit');
 Route::post('/profil' , 'UsersController@update');
-
 Route::post('/passReset', 'UsersController@passReset');
 
 
-Route::get('/inscription', 'InscriptionController@create');
-Route::post('/inscription', 'InscriptionController@store');
 
+Route::get('/admin', [
+	'middleware' => 'admin',
+	'uses' => 'AdminsController@index'
+]);
 
-Route::get('/deconnexion', 'ConnexionController@destroy');

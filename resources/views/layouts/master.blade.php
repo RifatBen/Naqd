@@ -11,6 +11,7 @@
 	<title>NAQD</title>
 </head>
 <body>
+
 	@include('layouts.navbar')
 	
 	@yield('content')

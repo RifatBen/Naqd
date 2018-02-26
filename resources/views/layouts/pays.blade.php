@@ -257,7 +257,7 @@ array('716', 'ZWE', 'ZW', 'Zimbabwe')
 <div class="input-field col m10 offset-m1">
 							<select name="pays"> 
 								@foreach($countries as $country)
-									<option value="{{ $country[3] }}" {{ $country[3] === auth()->user()->pays  ? "selected":'' }}>{{ $country[3] }}</option>
+									<option value="{{ $country[3] }}" {{ auth()->check() ? ($country[3] === auth()->user()->pays  ? "selected":'' ) : ''}}>{{ $country[3] }}</option>
 								@endforeach
 							</select>
 							<label for="pays">Pays</label>

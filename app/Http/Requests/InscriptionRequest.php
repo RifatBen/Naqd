@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\User;
+use App\Mail\ConfirmMail;
 
 class InscriptionRequest extends FormRequest
 {
@@ -40,19 +41,19 @@ class InscriptionRequest extends FormRequest
 
     public function persist(){
         
-            User::create([
+            $user=User::create([
 
             'nom' => $this->get('nom'),
             'prenom' => $this->get('prenom'),
             'email' => $this->get('email'),
             'password' => bcrypt($this->get('password')),
             'genre' => $this->get('genre'),
-            'date_naissance' => $this->get('naissance'),
+            'naissance' => $this->get('naissance'),
             'pays' => $this->get('pays'),
             'niveau' => $this->get('niveau'),
             'etablissement' => $this->get('etablissement')
-        ]
-                
-            );
+        ]);
+
+            \Mail::to($user)->send(new ConfirmMail($user));
     }
 }

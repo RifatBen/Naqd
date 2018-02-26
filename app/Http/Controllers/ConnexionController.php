@@ -20,6 +20,10 @@ class ConnexionController extends Controller {
 		if(!auth()->attempt(request(['email', 'password']))) {
 			return back()->withErrors(['', 'Erreur de connexion']);
 		}
+		else if(auth()->user()->confirmed==0){
+			auth()->logout();
+			return back()->withErrors(['Confirmation', 'Votre compte n\'est pas validé, veuillez consulter votre email']);
+		}
 		return redirect('/');
 	}
 

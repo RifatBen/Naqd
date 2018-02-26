@@ -13,12 +13,13 @@ class CreateUsersTable extends Migration {
 			$table->string('prenom');
 			$table->string('email')->unique();
 			$table->string('password');
-			$table->date('date_naissance');
+			$table->date('naissance');
 			$table->string('genre');
 			$table->string('pays');
 			$table->string('niveau');
 			$table->string('etablissement');
 			$table->integer('admin')->default(0);
+			$table->integer('confirmed')->default(0);
 			$table->rememberToken();
 			$table->timestamps();
 		});

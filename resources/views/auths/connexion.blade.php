@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-		<div class="formulaire-fond"></div>
+		
 		<div class="formulaire-fond-2 right-align">
 			<a href="#"><img src="svg/twitter.svg" class="image-svg"></a>
 			<a href="#"><img src="svg/facebook.svg" class="image-svg"></a>
@@ -12,6 +12,7 @@
 			<div class="card center-align col m6 offset-m3">
 
 				<form method="post" action="/connexion">
+					@include('layouts.errors')
 					<h4>Connectez-vous</h4><hr><br>
 							
 							{{ csrf_field() }}
