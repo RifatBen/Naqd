@@ -27,6 +27,7 @@ Route::post('/article',['middleware'=>'admin', 'ArticlesController@store']);
 Route::get('/profil', 'UsersController@edit');
 Route::post('/profil' , 'UsersController@update');
 
+Route::post('/passReset', 'UsersController@passReset');
 
 
 Route::get('/inscription', 'InscriptionController@create');

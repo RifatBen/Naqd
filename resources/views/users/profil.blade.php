@@ -78,10 +78,12 @@
 		<div class="row">
 			<div class="card white center-align col m6 offset-m3">
 
-				<form method="post" >
+				<form method="post" action="passReset">
 
 					{{ csrf_field() }}
-
+					
+					@include('layouts.success')
+					
 					<h4>Modification du mot de passe</h4><hr><br>
 
 					<div class="row">
@@ -111,7 +113,8 @@
 						</div>
 					</div>
 				</form>
-
+					
+					@include('layouts.errors');
 			</div>
 		</div>
 
