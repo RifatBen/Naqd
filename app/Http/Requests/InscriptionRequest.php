@@ -52,7 +52,10 @@ class InscriptionRequest extends FormRequest
             'pays' => $this->get('pays'),
             'niveau' => $this->get('niveau'),
             'etablissement' => $this->get('etablissement')
+                    
         ]);
+        $user->confirm_code = str_random(16);
+        $user->save();
 
             \Mail::to($user)->send(new ConfirmMail($user));
     }

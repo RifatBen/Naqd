@@ -10,12 +10,16 @@ class Article extends Model
 
 
 	public function lien(){
-		return '<a href="/articles/' . $this->id . '">[...] Lire la suite</a>';
+		$link ='/article/' . $this->id;
+		return $link;
 	}
 
 	public function extrait(){
-		$extrait = substr($this->contenu, 0 , 200) . $this->lien();
+		if(strlen($this->contenu)> 200){
+			$extrait = substr($this->contenu, 0 , 200) . '[...]';	
+			return $extrait;
 
-		return $extrait;
+		}
+		return $this->contenu;
 	}    
 }

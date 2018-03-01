@@ -42,7 +42,7 @@
 
 					<div class="row">
 						<div class="input-field col m10 offset-m1">
-							<input id="naissance" type="date" name="naissance" class="validate" required value="{{auth()->user()->date_naissance}}">
+							<input id="naissance" type="date" name="naissance" class="validate" required value="{{auth()->user()->naissance}}">
 							<label for="naissance" class="active">Date de naissance</label>
 						</div>
 					</div>

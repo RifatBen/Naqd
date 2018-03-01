@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->string('etablissement');
 			$table->integer('admin')->default(0);
 			$table->integer('confirmed')->default(0);
+			$table->string('confirm_code')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 		});

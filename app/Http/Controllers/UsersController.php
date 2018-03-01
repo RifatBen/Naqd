@@ -10,7 +10,7 @@ class UsersController extends Controller
 
 
 	public function __construct(){
-		$this->middleware('auth');
+		$this->middleware('auth')->except(['oublieIndex', 'oubliePass']);
 	}
     
 	public function edit(User $user){
@@ -68,5 +68,4 @@ class UsersController extends Controller
 		return back();
 
 	}
-
 }

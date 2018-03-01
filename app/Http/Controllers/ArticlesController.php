@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ArticlesController extends Controller
 {
@@ -42,6 +43,8 @@ class ArticlesController extends Controller
         ]);
 
         Article::create(request(['titre', 'contenu']));
+        Session::flash('Success', 'Article ajouté avec succès');
+        return back();
     }
 
     /**
@@ -84,8 +87,9 @@ class ArticlesController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        Article::where('id', '=' , $id)->delete();
+        return back();
     }
 }

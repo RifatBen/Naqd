@@ -1,0 +1,23 @@
+body {
+	background-color: #F4F4F4;
+}
+
+.card {
+	padding: 20px;
+}
+.nav-extended {
+	background-color: #970747;
+}
+
+.button-validation-menu {
+	background-color: #283E56;
+	font-size: 12px;
+}
+.button-validation-menu:hover {
+	background-color: #1989AC;
+}
+
+img {
+	height: 20px;
+	padding: 0 8px;
+}

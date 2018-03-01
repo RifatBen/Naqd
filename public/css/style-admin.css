@@ -1,10 +1,21 @@
 body {
 	background-color: lightgray;
+	font-size: 12px;
 }
 
 .button-validation {
 	background-color: #283E56;
 }
 .button-validation:hover {
+	background-color: #1989AC;
+}
+
+.button-validation-admin {
+	background-color: #283E56;
+	width: 90%;
+	font-size: 12px;
+	padding: 0px;
+}
+.button-validation-admin:hover {
 	background-color: #1989AC;
 }

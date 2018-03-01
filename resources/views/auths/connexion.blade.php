@@ -7,10 +7,10 @@
 			<a href="#"><img src="svg/facebook.svg" class="image-svg"></a>
 			<a href="#"><img src="svg/youtube.svg" class="image-svg"></a>
 		</div>
-
+		
 		<div class="row">
 			<div class="card center-align col m6 offset-m3">
-
+			@include('layouts.success')
 				<form method="post" action="/connexion">
 					@include('layouts.errors')
 					<h4>Connectez-vous</h4><hr><br>
@@ -41,7 +41,7 @@
 					</div>
 
 					<div class="row">
-						<span><a href="oublie.php">Mot de passe oublié ?</a></span>
+						<span><a href="/oublie">Mot de passe oublié ?</a></span>
 					</div>
 				</form>
 

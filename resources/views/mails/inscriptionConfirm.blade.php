@@ -1,5 +1,44 @@
-<h1>Ggg tu as confirmé</h1>
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>NAQD</title>
 
-Mounir : la variable $user, contient n'importe quelle information sur la personne inscrit.
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/materialize.min.css') }}"  media="screen,projection">
+		<link rel="stylesheet" href="{{ URL::asset('css/style-mail.css') }}">
 
-$user->email = {{$user->email}}
+	</head>
+
+	<body>
+
+		<nav class="nav-extended">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo center" target="_blank">NAQD</a>
+			</div>
+		</nav>
+
+		<div class="row">
+			<div class="col m6 s12 offset-m3">
+				<div class="card">
+					<h4 class="center">Inscription réussite !</h4><hr>
+					<p>veuillez confirmez votre inscription en cliquant sur le bouton ci dessous :</p>
+
+					<div class="center"><br>
+						<a href="127.0.0.1:8000/inscription/confirm/?code={{$user->confirm_code}}&email={{$user->email}}" class="btn button-validation-menu">Validation</a>
+					</div><br>
+				</div><br>
+
+				<div class="center">
+					<a href="#"><img src="svg/twitter.svg" class="image-svg"></a>
+					<a href="#"><img src="svg/facebook.svg" class="image-svg"></a>
+					<a href="#"><img src="svg/youtube.svg" class="image-svg"></a>
+				</div><hr style="border-color: lightgray;">
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	</body>
+</html>

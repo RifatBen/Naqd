@@ -27,42 +27,36 @@
 				<ul class="collapsible" data-collapsible="accordion" style="width: 100%">
 					<li>
 						<div class="collapsible-header active">Nouveautés</div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+
+						@foreach($nouveautes as $nouveaute)
+						<div class="collapsible-body"><span>{{$nouveaute->contenu}}</span></div>
+						@endforeach
 					</li>
 					<li>
-						<div class="collapsible-header">Important</div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+						<div class="collapsible-header">Importants</div>
+
+						@foreach($importants as $important)
+						<div class="collapsible-body"><span>{{$important->contenu}}</span></div>
+						@endforeach
 					</li>
-					<li>
 						<div class="collapsible-header">Rendez-vous !</div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-						<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+						@foreach($rendezvous as $rdv)
+						<div class="collapsible-body"><span>{{$rdv->contenu}}</span></div>
+						@endforeach
 					</li>
+					
 				</ul>
 			</div>
 
 			<div class="col m9">
-
-
-				@foreach($articles as $article)
-
 				<div class="row">
+					@foreach($articles as $article)
+					
 					<div class="col s12 m6">
 						<div class="card card-accueil">
 							<div class="card-content">
-								<span class="card-title"><a href="#">{{ $article->titre }}</a></span><hr>
-								<p>{{ }}</p>
+								<span class="card-title"><a href="{{ $article->lien() }}">{{ $article->titre }}</a></span><hr>
+								<p>{{ $article->extrait() }}</p>
 							</div>
 						</div>
 					</div>
@@ -76,3 +70,4 @@
 
 
 @endsection
+
