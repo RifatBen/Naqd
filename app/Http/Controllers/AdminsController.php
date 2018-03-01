@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Notification;
-
+use App\User;
+use App\Contenu;
 class AdminsController extends Controller
 {
 
@@ -35,7 +36,8 @@ class AdminsController extends Controller
 	}
 
 	public function contenuDestroy(){
-		return view('admins.contenus.delete');
+		$contenus=Contenu::all();
+		return view('admins.contenus.delete', compact('contenus'));
 	}
 
 
@@ -51,4 +53,9 @@ class AdminsController extends Controller
 		return view('admins.notifications.delete',compact('importants','rendezvous','nouveautes'));
 	}
 
+
+	public function userDestroy(){
+		$users = User::all();
+		return view('admins.users.delete', compact('users'));
+	}
 }

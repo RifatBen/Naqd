@@ -39,6 +39,7 @@
 						<div class="collapsible-body"><span>{{$important->contenu}}</span></div>
 						@endforeach
 					</li>
+					<li>
 						<div class="collapsible-header">Rendez-vous !</div>
 						@foreach($rendezvous as $rdv)
 						<div class="collapsible-body"><span>{{$rdv->contenu}}</span></div>

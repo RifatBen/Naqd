@@ -8,6 +8,8 @@
 			<div class="col m9 s12"><br>
 				<div class="card" style="padding: 20px 20px 0 20px;">
 					<span class="card-title">Supprimer un Utilisateur</span>
+					@include('layouts.success')
+					@include('layouts.errors')
 					<table class="responsive-table">
 						<thead>
 							<tr>
@@ -18,50 +20,20 @@
 						</thead>
 
 						<tbody>
-							<tr>
-								<td>NomCompletDeL'utilisateur</td>
-								<td>nomComplet@adresse.com</td>
-								<td class="center">
-									<form method="post">
-										<input type="hidden" name="" value="">
-										<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td>NomCompletDeL'utilisateur</td>
-								<td>nomComplet@adresse.com</td>
-								<td class="center">
-									<form method="post">
-										<input type="hidden" name="" value="">
-										<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td>NomCompletDeL'utilisateur</td>
-								<td>nomComplet@adresse.com</td>
-								<td class="center">
-									<form method="post">
-										<input type="hidden" name="" value="">
-										<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td>NomCompletDeL'utilisateur</td>
-								<td>nomComplet@adresse.com</td>
-								<td class="center">
-									<form method="post">
-										<input type="hidden" name="" value="">
-										<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-										</button>
-									</form>
-								</td>
-							</tr>
+							@foreach($users as $user)	
+								<tr>
+									<td>{{$user->nom . ' ' . $user->prenom}}</td>
+									<td>{{$user->email}}</td>
+									<td class="center">
+										<form method="post" action="/admin/utilisateur/sup/{{$user->id}}">
+											{{csrf_field()}}
+											@method('DELETE')
+											<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
+											</button>
+										</form>
+									</td>
+								</tr>
+							@endforeach
 						</tbody>
 					</table>
 

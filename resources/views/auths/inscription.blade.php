@@ -9,7 +9,7 @@
 
 		<div class="row">
 			<div class="card center-align col m6 offset-m3">
-
+@include('layouts.errors')
 				<form method="post">
 					<h4>Inscrivez-vous</h4><hr><br>
 
@@ -95,7 +95,7 @@
 					</div>
 				</form>
 
-				@include('layouts.errors')
+				
 
 			</div>
 		</div>

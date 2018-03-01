@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Contenu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;
 
 class ContenusController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,8 @@ class ContenusController extends Controller
      */
     public function index()
     {
-        return view('contenu.index');
+        $contenus = Contenu::all();
+        return view('contenu.index',compact('contenus'));
     }
 
     /**
@@ -35,7 +43,24 @@ class ContenusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate(request(),[
+            'nom' => 'required',
+            'region' => 'required',
+            'categorie' => 'required',
+        ]);
+
+
+        $filename=$request->fichier->store('contenu/'. $request->region.'/'.$request->categorie);
+        Contenu::create([
+            'nom' => request('nom'),
+            'region' => request('region'),
+            'categorie' => request('categorie'),
+            'link' => $filename
+        ]);
+
+        Session::flash('Success', 'Contenu ajouté avec succès');
+        return back();
     }
 
     /**
@@ -80,6 +105,9 @@ class ContenusController extends Controller
      */
     public function destroy(Contenu $contenu)
     {
-        //
+        Storage::delete($contenu->link);
+        $contenu->delete();
+        Session::flash('Success', 'Contenu supprimé avec succès');
+        return back();
     }
 }

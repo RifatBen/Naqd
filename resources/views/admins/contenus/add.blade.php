@@ -15,40 +15,43 @@
 					<div class="card">
 						<div class="card-content">
 							<span class="card-title">Ajouter du Contenu</span>
-
-							<form method="post"> <!-- formulaire -->
+							@include('layouts.success')
+							@include('layouts.errors')
+							<form method="post" action="/admin/contenu/ajout" enctype="multipart/form-data"> <!-- formulaire -->
+								{{csrf_field()}}
 								<div class="input-field">
 									<input type="text" id="nom" name="nom">
 									<label for="nom">Nom</label>
 								</div>
 								<div class="input-field">
-									<select>
+									<select name="region">
 										<option value="" disabled selected>Choisissez votre option</option>
-										<option value="">Algérie</option>
-										<option value="">Afrique</option>
-										<option value="">Moyen Orient</option>
-										<option value="">Monde</option>
+										<option value="Algérie">Algérie</option>
+										<option value="Afrique">Afrique</option>
+										<option value="Moyen_Orient">Moyen Orient</option>
+										<option value="Monde">Monde</option>
 									</select>
-									<label>Région</label>
+									<label for="region">Région</label>
 								</div>
 								<div class="input-field">
-									<select>
+									<select name="categorie">
 										<option value="" disabled selected>Choisissez votre option</option>
-										<option value="">Culture et éducation</option>
-										<option value="">Droit de l'homme / humanitaire</option>
-										<option value="">Philo-idéologie-politique</option>
-										<option value="">Pétition / Déclaration</option>
-										<option value="">Associations</option>
-										<option value="">Patrimoine</option>
-										<option value="">Géo-stratégie</option>
-										<option value="">Sub-alterne-studies</option>
+										<option value="Culture_et_éducation">Culture et éducation</option>
+										<option value="Droit_de_l'homme_humanitaire">Droit de l'homme / humanitaire</option>
+										<option value="Philo-idéologie-politique">Philo-idéologie-politique</option>
+										<option value="Pétition_Déclaration">Pétition / Déclaration</option>
+										<option value="Associations">Associations</option>
+										<option value="Patrimoine">Patrimoine</option>
+										<option value="Géo-stratégie">Géo-stratégie</option>
+										<option value="Sub-alterne-studies">Sub-alterne-studies</option>
 									</select>
-									<label>Catégorie</label>
+									<label for="categorie">Catégorie</label>
 								</div>
+								
 								<div class="file-field input-field">
 									<div class="btn button-validation" style="padding: 0 10px; font-size: 12px; border-radius: 15px;">
 										<span>Fichier</span>
-										<input type="file">
+										<input type="file" name="fichier">
 									</div>
 									<div class="file-path-wrapper">
 										<input class="file-path validate" type="text">

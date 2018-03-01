@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
+use App\User;
 class ArticlesController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -87,9 +91,10 @@ class ArticlesController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        Article::where('id', '=' , $id)->delete();
+        $article->delete();
+        Session::flash('Success', 'L\'article à été supprimé avec succès!');
         return back();
     }
 }

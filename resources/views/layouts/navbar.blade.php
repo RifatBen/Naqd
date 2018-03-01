@@ -8,7 +8,11 @@
 					<li><a href="#">Aide</a></li>
 				</ul>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				
 					@if(auth()->check())
+					@if(auth()->user()->admin==1)
+					<li><a href="/admin">Administration</a></li>
+					@endif
 					<li><a href="/profil">Profil</a></li>
 					<li><a href="/logout">Déconnexion</a></li>
 					@else
@@ -24,7 +28,11 @@
 					<li><a href="/">Accueil</a></li>
 					<li><a href="/contenu">Contenu</a></li>
 					<li><a href="#">Aide</a></li>
+					
 					@if(auth()->check())
+					@if(auth()->user()->admin==1)
+					<li><a href="/admin">Administration</a></li>
+					@endif
 					<li><a href="/profil">Profil</a></li>
 					<li><a href="/logout">Déconnexion</a></li>
 					@else

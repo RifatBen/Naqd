@@ -15,7 +15,7 @@ class Article extends Model
 	}
 
 	public function extrait(){
-		if(strlen($this->contenu)> 200){
+		if(strlen($this->contenu)> 300){
 			$extrait = substr($this->contenu, 0 , 200) . '[...]';	
 			return $extrait;
 

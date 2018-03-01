@@ -23,6 +23,18 @@
 
 			<div class="col m9 s12" style="padding: 0;">
 				<div class="card-panel">
+
+					<div class="row">
+						<form method="post">
+							<div class="col s10">
+								<input type="text" name="recherche" placeholder="Recherche...">
+							</div>
+							<div class="col s2">
+								<a class="btn button-validation-contenu" style="width: 100%; margin-top: 5px;"><i class="material-icons">search</i></a>
+							</div>
+						</form>
+					</div>
+
 					<table class="responsive-table">
 						<thead>
 							<tr>
@@ -33,56 +45,13 @@
 						</thead>
 
 						<tbody>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
-							<tr>
-								<td><a href="#">NomCompletDuFichier</a></td>
-								<td>NomDeLaRegion</td>
-								<td>NomDeLaCategorieDuFichier</td>
-							</tr>
+							@foreach($contenus as $contenu)
+								<tr>
+									<td><a href="#">{{$contenu->nom}}</a></td>
+									<td>{{$contenu->region}}</td>
+									<td>{{$contenu->categorie}}</td>
+								</tr>
+							@endforeach
 						</tbody>
 					</table>
 

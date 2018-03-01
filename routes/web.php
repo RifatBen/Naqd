@@ -59,16 +59,24 @@ Route::post('/passReset', 'UsersController@passReset');
 
 
 Route::get('/admin', 'AdminsController@index');
+
+
 Route::get('/admin/article/ajout', 'AdminsController@articleCreate');
 Route::post('/admin/article/ajout', 'ArticlesController@store');
 Route::get('/admin/article/sup', 'AdminsController@articleDestroy');
-Route::delete('/admin/article/sup/{id}', 'ArticlesController@destroy');
+Route::delete('/admin/article/sup/{article}', 'ArticlesController@destroy');
 
 
 Route::get('/admin/contenu/ajout', 'AdminsController@contenuCreate');
+Route::post('/admin/contenu/ajout', 'ContenusController@store');
 Route::get('/admin/contenu/sup', 'AdminsController@contenuDestroy');
+Route::delete('/admin/contenu/sup/{contenu}', 'ContenusController@destroy');
 
 
 Route::get('/admin/notification/ajout', 'AdminsController@notificationCreate');
 Route::post('/admin/notification/ajout', 'NotificationsController@store');
 Route::get('/admin/notification/sup', 'AdminsController@notificationDestroy');
+
+
+Route::get('/admin/utilisateur/sup', 'AdminsController@userDestroy');
+Route::delete('/admin/utilisateur/sup/{user}', 'UsersController@destroy');

@@ -25,46 +25,19 @@
 							</thead>
 
 							<tbody>
-								<tr>
-									<td><a href="#">NomCompletDuFichier</a></td>
-									<td class="center">
-										<form method="post">
-											<input type="hidden" name="" value="">
-											<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-											</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="#">NomCompletDuFichier</a></td>
-									<td class="center">
-										<form method="post">
-											<input type="hidden" name="" value="">
-											<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-											</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="#">NomCompletDuFichier</a></td>
-									<td class="center">
-										<form method="post">
-											<input type="hidden" name="" value="">
-											<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-											</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="#">NomCompletDuFichier</a></td>
-									<td class="center">
-										<form method="post">
-											<input type="hidden" name="" value="">
-											<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
-											</button>
-										</form>
-									</td>
-								</tr>
+								@foreach($contenus as $contenu)
+									<tr>
+										<td><a href="#">{{$contenu->nom}}</a></td>
+										<td class="center">
+											<form method="post" action="/admin/contenu/sup/{{$contenu->id}}">
+												{{csrf_field()}}
+												@method('DELETE')
+												<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
+												</button>
+											</form>
+										</td>
+									</tr>
+								@endforeach
 							</tbody>
 						</table>
 

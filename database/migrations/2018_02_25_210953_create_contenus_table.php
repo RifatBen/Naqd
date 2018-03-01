@@ -15,6 +15,10 @@ class CreateContenusTable extends Migration
     {
         Schema::create('contenus', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nom');
+            $table->string('region');
+            $table->string('categorie');
+            $table->string('link');
             $table->timestamps();
         });
     }
