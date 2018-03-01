@@ -1,12 +1,10 @@
-@extends('layouts.master')
-
+@extends('layouts.masternone')
 @section('content')
 
 <div class="formulaire-fond"><a class="btn-floating btn-large button-validation" href="/" title="vers l'accueil"><i class="material-icons">arrow_back</i></a></div>
 		<div class="formulaire-fond-2 right-align">
-			<a href="#"><img src="svg/twitter.svg" class="image-svg"></a>
-			<a href="#"><img src="svg/facebook.svg" class="image-svg"></a>
-			<a href="#"><img src="svg/youtube.svg" class="image-svg"></a>
+			<a target="_blank" href="https://www.facebook.com/naqd.critic"><img src="{{ URL::asset('svg/facebook.svg') }}" class="image-svg"></a>
+			<a target="_blank" href="https://www.youtube.com/channel/UCofjVJeU-O5SBAEQnl1GexQ"><img src="{{ URL::asset('svg/youtube.svg') }}" class="image-svg"></a>
 		</div>
 
 		<div class="row">

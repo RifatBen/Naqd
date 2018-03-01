@@ -31,9 +31,8 @@
 				</div><br>
 
 				<div class="center">
-					<a href="#"><img src="svg/twitter.svg" class="image-svg"></a>
-					<a href="#"><img src="svg/facebook.svg" class="image-svg"></a>
-					<a href="#"><img src="svg/youtube.svg" class="image-svg"></a>
+					<a target="_blank" href="https://www.facebook.com/naqd.critic"><img src="{{ URL::asset('svg/facebook.svg') }}" class="image-svg"></a>
+					<a target="_blank" href="https://www.youtube.com/channel/UCofjVJeU-O5SBAEQnl1GexQ"><img src="{{ URL::asset('svg/youtube.svg') }}" class="image-svg"></a>
 				</div><hr style="border-color: lightgray;">
 			</div>
 		</div>

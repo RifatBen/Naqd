@@ -37,10 +37,6 @@
 									</td>
 								</tr>
 								@endforeach
-						<ul class="pagination">
-							<li class="left"><a href="#"><i class="material-icons">chevron_left</i></a></li>
-							<li class="right"><a href="#"><i class="material-icons">chevron_right</i></a></li>
-						</ul>
 
 						
 					</div>
