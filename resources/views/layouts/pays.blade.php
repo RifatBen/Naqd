@@ -256,6 +256,7 @@ array('716', 'ZWE', 'ZW', 'Zimbabwe')
 
 <div class="input-field col m10 offset-m1">
 							<select name="pays"> 
+								<option value="" disabled selected>Sélectionnez votre pays</option>
 								@foreach($countries as $country)
 									<option value="{{ $country[3] }}" {{ auth()->check() ? ($country[3] === auth()->user()->pays  ? "selected":'' ) : ''}}>{{ $country[3] }}</option>
 								@endforeach
