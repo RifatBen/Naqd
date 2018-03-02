@@ -4,7 +4,7 @@
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="left hide-on-med-and-down">
 					<li><a href="/">Accueil</a></li>
-					<li><a href="/contenu/?region=&categorie=">Contenu</a></li>
+					<li><a href="/contenu">Contenu</a></li>
 					<li><a href="#">Aide</a></li>
 				</ul>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">

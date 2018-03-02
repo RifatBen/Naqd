@@ -48,6 +48,7 @@ Route::get('/',
 
 
 Route::get('/contenu', 'ContenusController@index');
+Route::post('/contenu', 'ContenusController@search');
 
 Route::get('/article/{article}', 'ArticlesController@show');
 Route::post('/article',['middleware'=>'admin', 'ArticlesController@store']);

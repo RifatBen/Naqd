@@ -25,12 +25,13 @@
 				<div class="card-panel">
 
 					<div class="row">
-						<form method="post">
+						<form method="post" action="/contenu">
+							{{csrf_field()}}
 							<div class="col s10">
 								<input type="text" name="recherche" placeholder="Recherche...">
 							</div>
 							<div class="col s2">
-								<a class="btn button-validation-contenu" style="width: 100%; margin-top: 5px;"><i class="material-icons">search</i></a>
+								<a class="btn button-validation-contenu" style="width: 100%; margin-top: 5px;"><i type="submit" class="material-icons">search</i></a>
 							</div>
 						</form>
 					</div>

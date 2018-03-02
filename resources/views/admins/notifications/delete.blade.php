@@ -62,7 +62,7 @@
 									<tr>
 										<td>{{$important->contenu}}</td>
 										<td class="center">
-											<form method="post" action="/admin/notification/sup/{{$nouveaute->id}}">
+											<form method="post" action="/admin/notification/sup/{{$important->id}}">
 												@method('DELETE')
 												{{ csrf_field() }}
 												<button class="btn" type="submit" name="action"><i class="material-icons">close</i>
@@ -95,7 +95,7 @@
 									<tr>
 										<td>{{$rdv->contenu}}</td>
 										<td class="center">
-											<form method="post" action="/admin/notification/sup/{{$nouveaute->id}}">
+											<form method="post" action="/admin/notification/sup/{{$rdv->id}}">
 												@method('DELETE')
 												{{ csrf_field() }}
 												<button class="btn" type="submit" name="action"><i class="material-icons">close</i>

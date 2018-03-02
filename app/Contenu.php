@@ -9,11 +9,11 @@ class Contenu extends Model
     protected $guarded =['id'];
 
     public function scopeFilter($query, $filters){
-    	if($filters['region']){
+    	if(isset($filters['region'])){
     		$query->where('region', $filters['region']);
     	}
 
-    	if($filters['categorie']){
+    	if(isset($filters['categorie'])){
     		$query->where('categorie', $filters['categorie']);
     	}
 	    

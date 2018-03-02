@@ -21,7 +21,6 @@ class ContenusController extends Controller
      */
     public function index()
     {
-
             $contenus = Contenu::latest()
             ->filter(request(['region', 'categorie']))
             ->get();
@@ -29,16 +28,13 @@ class ContenusController extends Controller
         return view('contenu.index',compact('contenus'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    public function search(Request $request){
+        $contenus = Contenu::latest()
+            ->where('nom', 'like', '%'.request('recherche').'%')
+            ->get();
 
+        return view('contenu.index',compact('contenus'));
+    }
     /**
      * Store a newly created resource in storage.
      *
