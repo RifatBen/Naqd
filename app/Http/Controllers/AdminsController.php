@@ -47,9 +47,9 @@ class AdminsController extends Controller
 	}
 
 	public function notificationDestroy(){
-			$importants = Notification::where('type', '=', 'important')->get();
-	 		$rendezvous = Notification::where('type', '=' , 'rendezvous')->get();
-	 		$nouveautes = Notification::where('type', '=', 'nouveautes')->get();
+			$importants = Notification::where('type','important')->get();
+	 		$rendezvous = Notification::where('type','rendezvous')->get();
+	 		$nouveautes = Notification::where('type','nouveautes')->get();
 		return view('admins.notifications.delete',compact('importants','rendezvous','nouveautes'));
 	}
 

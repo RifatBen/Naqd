@@ -73,7 +73,7 @@ class UsersController extends Controller
 	public function destroy(User $user){
 		if($user->admin == 0){
 			$user->delete();
-			Session::flash('Success', 'Le mot de passe a été modifié avec succès!');
+			Session::flash('Success', 'L\'utilisateur a été supprimé avec succès!');
 			return back();
 		}
 		return back()->withErrors(['Admin' => 'Vous ne pouvez pas supprimer le compte d\'un administrateur']);
