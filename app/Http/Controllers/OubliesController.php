@@ -15,10 +15,13 @@ class OubliesController extends Controller
 	public function sendMail(Request $request){
 		$user = User::where('email', '=', request('email'))
 		->first();
-		$user->confirm_code = str_random(16);
-		$user->save();
-		\Mail::to(request('email'))->send(new OubliMail($user));
-		return redirect('/oublie_msg');
+		if($user){
+			$user->confirm_code = str_random(16);
+			$user->save();
+			\Mail::to(request('email'))->send(new OubliMail($user));
+			return redirect('/oublie_msg');
+		}
+		return back()->withErrors(['Introuvable', 'Aucun compte relié a cette email n\'a été trouvé']);	
 	}
 
 	public function passReset(Request $request){

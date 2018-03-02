@@ -73,8 +73,11 @@ class NotificationsController extends Controller
      * @param  \App\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Notification $notification)
+    public function destroy(Notification $notif)
     {
-        //
+        $notif->delete();
+        Session::flash('Success', 'Notification supprimée avec succès');
+
+        return back();
     }
 }

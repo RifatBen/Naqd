@@ -21,7 +21,11 @@ class ContenusController extends Controller
      */
     public function index()
     {
-        $contenus = Contenu::all();
+
+            $contenus = Contenu::latest()
+            ->filter(request(['region', 'categorie']))
+            ->get();
+        
         return view('contenu.index',compact('contenus'));
     }
 
@@ -71,7 +75,7 @@ class ContenusController extends Controller
      */
     public function show(Contenu $contenu)
     {
-        //
+        
     }
 
     /**

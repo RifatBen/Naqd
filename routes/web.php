@@ -24,9 +24,11 @@ Route::get('/logout', 'ConnexionController@destroy');
 
 Route::get('/inscription', 'InscriptionController@create');
 Route::post('/inscription', 'InscriptionController@store');
- 
-Route::get('/inscription/confirm', 'InscriptionController@confirm');
 
+Route::get('/inscription/confirm', 'InscriptionController@confirm');
+Route::get('/inscription_msg', function(){
+	return view('auths.inscription_message');
+});
 
 
 Route::get('/',
@@ -76,6 +78,7 @@ Route::delete('/admin/contenu/sup/{contenu}', 'ContenusController@destroy');
 Route::get('/admin/notification/ajout', 'AdminsController@notificationCreate');
 Route::post('/admin/notification/ajout', 'NotificationsController@store');
 Route::get('/admin/notification/sup', 'AdminsController@notificationDestroy');
+Route::delete('/admin/notification/sup/{notif}', 'NotificationsController@destroy');
 
 
 Route::get('/admin/utilisateur/sup', 'AdminsController@userDestroy');

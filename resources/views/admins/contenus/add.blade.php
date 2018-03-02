@@ -28,7 +28,7 @@
 										<option value="" disabled selected>Choisissez votre option</option>
 										<option value="Algérie">Algérie</option>
 										<option value="Afrique">Afrique</option>
-										<option value="Moyen_Orient">Moyen Orient</option>
+										<option value="Moyen Orient">Moyen Orient</option>
 										<option value="Monde">Monde</option>
 									</select>
 									<label for="region">Région</label>
@@ -36,10 +36,10 @@
 								<div class="input-field">
 									<select name="categorie">
 										<option value="" disabled selected>Choisissez votre option</option>
-										<option value="Culture_et_éducation">Culture et éducation</option>
-										<option value="Droit_de_l'homme_humanitaire">Droit de l'homme / humanitaire</option>
+										<option value="Culture et éducation">Culture et éducation</option>
+										<option value="Droit de l'homme humanitaire">Droit de l'homme / humanitaire</option>
 										<option value="Philo-idéologie-politique">Philo-idéologie-politique</option>
-										<option value="Pétition_Déclaration">Pétition / Déclaration</option>
+										<option value="Pétition Déclaration">Pétition / Déclaration</option>
 										<option value="Associations">Associations</option>
 										<option value="Patrimoine">Patrimoine</option>
 										<option value="Géo-stratégie">Géo-stratégie</option>

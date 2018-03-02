@@ -21,7 +21,7 @@ class InscriptionController extends Controller {
 
 		
 
-		return redirect()->home();
+		return redirect('/inscription_msg');
 	}
 
 

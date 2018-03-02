@@ -3,22 +3,22 @@
 @section('content')
 
 <div class="row">
-			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Algérie</a></div>
-			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Afrique</a></div>
-			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Moyen Orient</a></div>
-			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Monde</a></div>
+			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region=Algérie&categorie={{request('categorie')}}">Algérie</a></div>
+			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region=Afrique&categorie={{request('categorie')}}">Afrique</a></div>
+			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region=Moyen Orient&categorie={{request('categorie')}}">Moyen Orient</a></div>
+			<div class="col m3 s12 center" style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region=Monde&categorie={{request('categorie')}}">Monde</a></div>
 		</div><hr style="border-color: white;">
 
 		<div class="row">
 			<div class="col m3 s12 center">
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Culture et éducation</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Droit de l'homme / humanitaire</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Philo-idéologie-politique</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Pétition / Déclaration</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Associations</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Patrimoine</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Géo-stratégie</a></div>
-				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="#">Sub-alterne-studies</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Culture et éducation">Culture et éducation</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Droit de l'homme humanitaire">Droit de l'homme / humanitaire</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Philo-idéologie-politique">Philo-idéologie-politique</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Pétition Déclaration">Pétition / Déclaration</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Associations">Associations</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Patrimoine">Patrimoine</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Géo-stratégie">Géo-stratégie</a></div>
+				<div style="padding-top: 10px;"><a class="btn button-validation-contenu" href="/contenu/?region={{request('region')}}&categorie=Sub-alterne-studies">Sub-alterne-studies</a></div>
 			</div>
 
 			<div class="col m9 s12" style="padding: 0;">
