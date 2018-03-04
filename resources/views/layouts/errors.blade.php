@@ -1,9 +1,15 @@
 @if($errors->any())
 
-	<div class="row red lighten-2 white-text">
-		@foreach($errors->all() as $error)
-			{{$error}} <br>
-		@endforeach
-	</div>
+		<div class="row">
+			<div class="card card-error center-align col m6 offset-m3">
+
+				<ul>
+					@foreach($errors->all() as $error)
+						<li>{{$error}}</li>
+					@endforeach
+				</ul>
+
+			</div>
+		</div>
 
 @endif

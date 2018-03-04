@@ -8,8 +8,6 @@
 			<div class="col m9 s12"><br>
 				<div class="card" style="padding: 20px 20px 0 20px;">
 					<span class="card-title">Supprimer un Utilisateur</span>
-					@include('layouts.success')
-					@include('layouts.errors')
 					<table class="responsive-table">
 						<thead>
 							<tr>
@@ -34,11 +32,15 @@
 									</td>
 								</tr>
 							@endforeach
-						</tbody>
-					</table>
+							</tbody>
+						</table>
+
+					</div>
+
+					@include('layouts.success')
+					@include('layouts.errors')
 
 				</div>
-			</div>
 		</div>
 
 

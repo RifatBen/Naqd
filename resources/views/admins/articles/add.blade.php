@@ -14,7 +14,6 @@
 				<div class="row">
 					<div class="card">
 						<div class="card-content">
-							@include('layouts.success')
 							<span class="card-title">Ajouter un Article</span>
 							
 							<form method="post" action="/admin/article/ajout"> <!-- formulaire -->
@@ -29,9 +28,13 @@
 								</div>
 								<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 							</form>
-						@include('layouts.errors')
+						
 						</div>
 					</div>
+			
+					@include('layouts.errors')
+					@include('layouts.success')
+
 				</div>
 			</div>
 		</div>

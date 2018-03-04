@@ -15,8 +15,6 @@
 					<div class="card">
 						<div class="card-content">
 							<span class="card-title">Ajouter du Contenu</span>
-							@include('layouts.success')
-							@include('layouts.errors')
 							<form method="post" action="/admin/contenu/ajout" enctype="multipart/form-data"> <!-- formulaire -->
 								{{csrf_field()}}
 								<div class="input-field">
@@ -59,9 +57,13 @@
 								</div>
 								<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 							</form>
-							
+						
 						</div>
 					</div>
+			
+					@include('layouts.errors')
+					@include('layouts.success')
+
 				</div>
 			</div>
 		</div>

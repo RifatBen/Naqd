@@ -8,7 +8,7 @@
 
 		<div class="row">
 			<div class="card center-align col m6 offset-m3">
-@include('layouts.errors')
+
 				<form method="post">
 					<h4>Inscrivez-vous</h4><hr><br>
 
@@ -93,12 +93,11 @@
 						</div>
 					</div>
 				</form>
-
-				
-
 			</div>
 		</div>
 
 
+	@include('layouts.errors')
+	@include('layouts.success')
 
 @endsection
