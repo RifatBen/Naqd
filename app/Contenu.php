@@ -10,7 +10,15 @@ class Contenu extends Model
 
     public function scopeFilter($query, $filters){
     	if(isset($filters['region'])){
+            
+            if($filters['region'] != 'Monde'){
     		$query->where('region', $filters['region']);
+            }
+
+            if($filters['region'] == 'Afrique'){
+                $query->where('region', $filters['region'])
+                        ->orWhere('region', 'Algérie');
+            }
     	}
 
     	if(isset($filters['categorie'])){

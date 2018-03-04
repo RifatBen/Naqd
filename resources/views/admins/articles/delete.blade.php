@@ -26,7 +26,7 @@
 							<tbody>
 								@foreach($articles as $article)
 								<tr>
-									<td><a href="/articles/{{$article->id}}">{{$article->titre}}</a></td>
+									<td><a href="/article/{{$article->id}}">{{$article->titre}}</a></td>
 									<td class="center">
 										<form method="post" action="/admin/article/sup/{{$article->id}}">
 											{{csrf_field()}}

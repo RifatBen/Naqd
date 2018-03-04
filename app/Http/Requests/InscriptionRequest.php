@@ -25,10 +25,11 @@ class InscriptionRequest extends FormRequest
      */
     public function rules()
     {
+        $select = "SELECT email FROM users ";
         return [
            'nom' => 'required|max:255',
             'prenom' => 'required|max:255',
-            'email' => 'required|max:255|email',
+            'email' => 'required|max:255|email|unique:users',
             'password' => 'required|min:8|max:32|confirmed',
             'genre' => 'required|max:255',
             'naissance' => 'required|date',
