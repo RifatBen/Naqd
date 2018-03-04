@@ -1,5 +1,8 @@
 body {
-	background-color: #F4F4F4;
+	color:black;
+	background-color:white;
+	background-image:url(spiration-light.png);
+	background-attachment:fixed;
 }
 
 .formulaire-fond {

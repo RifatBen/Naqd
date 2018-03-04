@@ -3,8 +3,8 @@
 
 <div class="formulaire-fond"><a class="btn-floating btn-large button-validation" href="javascript:history.back()" title="vers l'accueil"><i class="material-icons">arrow_back</i></a></div>
 		<div class="formulaire-fond-2 right-align">
-			<a target="_blank" href="https://www.facebook.com/naqd.critic"><img src="svg/facebook.svg" class="image-svg"></a>
-			<a target="_blank" href="https://www.youtube.com/channel/UCofjVJeU-O5SBAEQnl1GexQ"><img src="svg/youtube.svg" class="image-svg"></a>
+			<a target="_blank" href="https://www.facebook.com/naqd.critic"><img src="{{ URL::asset('svg/facebook.svg') }}" class="image-svg"></a>
+			<a target="_blank" href="https://www.youtube.com/channel/UCofjVJeU-O5SBAEQnl1GexQ"><img src="{{ URL::asset('svg/youtube.svg') }}" class="image-svg"></a>
 		</div>
 
 		<div class="row">
