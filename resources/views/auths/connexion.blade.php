@@ -13,7 +13,7 @@
 					@include('layouts.errors')
 					<h4>Connectez-vous</h4><hr><br>
 							
-							{{ csrf_field() }}
+					{{ csrf_field() }}
 					<div class="row">
 						<span>Vous n'êtes pas encore inscrit ? <a href="/inscription">Inscription</a></span>
 					</div>
