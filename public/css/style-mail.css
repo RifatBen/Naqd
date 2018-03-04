@@ -21,3 +21,15 @@ img {
 	height: 20px;
 	padding: 0 8px;
 }
+
+.card-error {
+	background-color: #e53935;
+	color: white;
+	margin-top: 20px;
+}
+
+.card-success {
+	background-color: #43a047;
+	color: white;
+	margin-top: 20px;
+}

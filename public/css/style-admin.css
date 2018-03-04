@@ -19,3 +19,15 @@ body {
 .button-validation-admin:hover {
 	background-color: #1989AC;
 }
+
+.card-error {
+	background-color: #e53935;
+	color: white;
+	margin-top: 20px;
+}
+
+.card-success {
+	background-color: #43a047;
+	color: white;
+	margin-top: 20px;
+}
