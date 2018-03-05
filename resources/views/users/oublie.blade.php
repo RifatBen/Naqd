@@ -9,7 +9,7 @@
 
 <div class="row">
 	<div class="card center-align col m6 offset-m3">
-		@include('layouts.errors')
+		
 		<form method="post" action="/oublie">
 			{{csrf_field()}}
 			<h5>Veuillez saisir votre adresse électronique</h5><hr><br>
@@ -33,6 +33,7 @@
 		</form>
 
 	</div>
+	@include('layouts.errors')
 </div>
 
 
