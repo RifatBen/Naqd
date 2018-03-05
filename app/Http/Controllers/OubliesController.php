@@ -38,12 +38,15 @@ class OubliesController extends Controller
 			->where('confirm_code', '=' , request('code'))
 			->first();
 
-		$user->update([
-			'password' => bcrypt(request('password')),
-			'confirm_code' => null
-		]);
+		if($user){
+			$user->update([
+				'password' => bcrypt(request('password')),
+				'confirm_code' => null
+			]);
+			Session::flash('Success', 'Mot de passe réinitialisé avec succès');
+		}
 
-		Session::flash('Success', 'Mot de passe réinitialisé avec succès');
+		
 		return redirect('/connexion');
 		
 	}
