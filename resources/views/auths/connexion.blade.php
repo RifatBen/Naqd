@@ -12,8 +12,6 @@
 		<div class="card center-align col m6 offset-m3">
 
 			<form method="post" action="/connexion">
-				@include('layouts.success')
-				@include('layouts.errors')
 				<h4>Connectez-vous</h4><hr><br>
 						
 				{{ csrf_field() }}
