@@ -51,7 +51,7 @@ class OubliesController extends Controller
 		]);
 
 		Session::flash('Success', 'Votre mot de passe a été réinitialisé avec succès');
-		return redirect('/connexion');
+		return redirect('/resetpassword');
 	}
 
 }
