@@ -27,7 +27,7 @@
 									<tr>
 										<td>{{$nouveaute->contenu}}</td>
 										<td class="center">
-											<form method="post" action="/admin/notification/sup/{{$nouveauteee->id}}">
+											<form method="post" action="/admin/notification/sup/{{$nouveaute->id}}">
 												{{ csrf_field() }}
 												@method('DELETE')
 												

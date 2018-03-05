@@ -48,6 +48,7 @@ class ContenusController extends Controller
             'nom' => 'required',
             'region' => 'required',
             'categorie' => 'required',
+            'fichier' => 'required|file'
         ]);
 
 

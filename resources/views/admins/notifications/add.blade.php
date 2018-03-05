@@ -19,8 +19,8 @@
 									{{ csrf_field() }}
 									<div class="input-field">
 										<input type="hidden" name="type" value="nouveautes" id="nouveautes">
-										<input type="text" id="contenu" name="contenu">
-										<label for="contenu">Nouveautés</label>
+										<input type="text" id="notification" name="notification">
+										<label for="notification">Nouveautés</label>
 									</div>
 									<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 								</form>
@@ -34,8 +34,8 @@
 									{{ csrf_field() }}
 									<div class="input-field">
 										<input type="hidden" name="type" value="important" id="important">
-										<input type="text" id="contenu" name="contenu">
-										<label for="contenu">Important</label>
+										<input type="text" id="notification" name="notification">
+										<label for="notification">Important</label>
 									</div>
 									<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 								</form>
@@ -49,8 +49,8 @@
 									{{ csrf_field() }}
 									<div class="input-field">
 										<input type="hidden" name="type" value="rendezvous" id="rendezvous">
-										<input type="text" id="contenu" name="contenu">
-										<label for="contenu">Rendez-vous !</label>
+										<input type="text" id="notification" name="notification">
+										<label for="notification">Rendez-vous !</label>
 									</div>
 									<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 								</form>

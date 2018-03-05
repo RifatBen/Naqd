@@ -21,12 +21,12 @@ class NotificationsController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(),[
-            'contenu' => 'required|min:3|max:50'
+            'notification' => 'required|min:3|max:50'
         ]);
 
         Notification::create([
             'type' => request('type'),
-            'contenu' => request('contenu')
+            'contenu' => request('notification')
         ]);
 
         Session::flash('Success', 'Notification ajoutée avec succès');
