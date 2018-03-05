@@ -96,7 +96,6 @@
 			</div>
 		</div>
 
-
 	@include('layouts.errors')
 	@include('layouts.success')
 

@@ -13,6 +13,10 @@
 				
 
 				<div class="row">
+
+					@include('layouts.errors')
+					@include('layouts.success')
+
 					<div class="card">
 						<div class="card-content">
 							<span class="card-title">Ajouter du Contenu</span>
@@ -61,10 +65,6 @@
 						
 						</div>
 					</div>
-			
-					@include('layouts.errors')
-					@include('layouts.success')
-
 				</div>
 			</div>
 		</div>

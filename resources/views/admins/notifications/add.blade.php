@@ -12,6 +12,10 @@
 				</div><hr>
 
 				<div class="row">
+
+					@include('layouts.errors')
+					@include('layouts.success')
+					
 						<div class="card">
 							<div class="card-content">
 								<span class="card-title">Ajouter une notification (Nouveautés)</span>
@@ -54,13 +58,8 @@
 									</div>
 									<center><button class="btn button-validation" type="submit" name="">Valider</button></center>
 								</form>
-						
+							</div>
 						</div>
-					</div>
-
-					@include('layouts.errors')
-					@include('layouts.success')
-
 				</div>
 			</div>
 		</div>

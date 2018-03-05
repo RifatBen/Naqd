@@ -29,20 +29,20 @@
 						<div class="collapsible-header active">Nouveautés</div>
 
 						@foreach($nouveautes as $nouveaute)
-						<div class="collapsible-body"><span>{{$nouveaute->contenu}}</span></div>
+						<div class="collapsible-body notif"><span>{{$nouveaute->contenu}}</span></div>
 						@endforeach
 					</li>
 					<li>
 						<div class="collapsible-header">Importants</div>
 
 						@foreach($importants as $important)
-						<div class="collapsible-body"><span>{{$important->contenu}}</span></div>
+						<div class="collapsible-body notif"><span>{{$important->contenu}}</span></div>
 						@endforeach
 					</li>
 					<li>
 						<div class="collapsible-header">Rendez-vous !</div>
 						@foreach($rendezvous as $rdv)
-						<div class="collapsible-body"><span>{{$rdv->contenu}}</span></div>
+						<div class="collapsible-body notif"><span>{{$rdv->contenu}}</span></div>
 						@endforeach
 					</li>
 					

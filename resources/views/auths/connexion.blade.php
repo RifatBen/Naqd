@@ -5,10 +5,12 @@
 		<a target="_blank" href="https://www.facebook.com/naqd.critic"><img src="svg/facebook.svg" class="image-svg"></a>
 		<a target="_blank" href="https://www.youtube.com/channel/UCofjVJeU-O5SBAEQnl1GexQ"><img src="svg/youtube.svg" class="image-svg"></a>
 	</div>
+
 	
 	<div class="row">
+
 		<div class="card center-align col m6 offset-m3">
-		
+
 			<form method="post" action="/connexion">
 				
 				<h4>Connectez-vous</h4><hr><br>
@@ -48,5 +50,7 @@
 
 	@include('layouts.errors')
 	@include('layouts.success')
+
+
 
 @endsection

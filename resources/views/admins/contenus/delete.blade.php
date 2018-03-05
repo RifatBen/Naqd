@@ -10,6 +10,9 @@
 					<div class="col m6 s12 center" style="padding-top: 10px;"><a class="btn button-validation-admin" href="/admin/contenu/ajout">Ajouter</a></div>
 					<div class="col m6 s12 center" style="padding-top: 10px;"><a class="btn button-validation-admin" href="/admin/contenu/sup">Supprimer</a></div>
 				</div><hr><br>
+
+				@include('layouts.errors')
+				@include('layouts.success')
 				
 				<div class="row">
 					<div class="card" style="padding: 20px 20px 0 20px;">
@@ -42,10 +45,6 @@
 
 					</div>
 				</div>
-
-				@include('layouts.errors')
-				@include('layouts.success')
-				
 			</div>
 		</div>
 
