@@ -15,7 +15,10 @@ Route::get('/oublie_msg', function(){
 	return view('users.oublie_msg');
 });
 Route::get('/resetpassword', function(){
+	if(request('code') && request('email'))
 	return view('users.resetpassword');
+	
+	return redirect('/connexion'); 
 });
 Route::post('/resetpassword', 'OubliesController@passReset');
 
