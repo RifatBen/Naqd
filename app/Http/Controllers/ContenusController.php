@@ -6,6 +6,7 @@ use App\Contenu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Response;
 
 class ContenusController extends Controller
 {
@@ -51,8 +52,11 @@ class ContenusController extends Controller
             'fichier' => 'required|file'
         ]);
 
+        $file = $request->file('fichier');
 
-        $filename=$request->fichier->store('contenu/'. $request->region.'/'.$request->categorie);
+
+        $filename=$file->store('contenu/'. $request->region.'/'.$request->categorie );
+
         Contenu::create([
             'nom' => request('nom'),
             'region' => request('region'),
@@ -110,5 +114,14 @@ class ContenusController extends Controller
         $contenu->delete();
         Session::flash('Success', 'Contenu supprimé avec succès');
         return back();
+    }
+
+
+    public function getDownload(Contenu $contenu)
+    {
+        //PDF file is stored under project/public/download/info.pdf
+        $downloadpath = public_path() . '/download/' . $contenu->link;
+
+        return Response::download($downloadpath);
     }
 }

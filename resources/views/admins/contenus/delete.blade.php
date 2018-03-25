@@ -29,7 +29,7 @@
 							<tbody>
 								@foreach($contenus as $contenu)
 									<tr>
-										<td><a href="#">{{$contenu->nom}}</a></td>
+										<td><a href="/download/{{$contenu->id}}">{{$contenu->nom}}</a></td>
 										<td class="center">
 											<form method="post" action="/admin/contenu/sup/{{$contenu->id}}">
 												{{csrf_field()}}

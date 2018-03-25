@@ -52,6 +52,9 @@ Route::get('/',
 
 Route::get('/contenu', 'ContenusController@index');
 Route::post('/contenu', 'ContenusController@search');
+Route::get('/download/{contenu}', 'ContenusController@getDownload');
+
+
 
 Route::get('/article/{article}', 'ArticlesController@show');
 Route::post('/article',['middleware'=>'admin', 'ArticlesController@store']);

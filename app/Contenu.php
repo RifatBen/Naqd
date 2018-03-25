@@ -21,7 +21,7 @@ class Contenu extends Model
             }
     	}
 
-    	if(isset($filters['categorie'])){
+    	else if(isset($filters['categorie'])){
     		$query->where('categorie', $filters['categorie']);
     	}
 	    

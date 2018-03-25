@@ -1,6 +1,6 @@
 <nav class="nav-extended">
 			<div class="nav-wrapper">
-				<a href="accueil.php" class="brand-logo center">NAQD</a>
+				<a href="/" class="brand-logo center">NAQD</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="left hide-on-med-and-down">
 					<li><a href="/">Accueil</a></li>
